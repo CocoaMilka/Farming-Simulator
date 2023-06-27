@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// Interface <c>IPlantable</c> is used for objects that can be planted.
-/// </summary/>
+/// </summary>
 /// <remarks>
 /// Fruit(s) refer to any harvestable food (even though they may not be friuts), not the plant.
 /// </remarks>
