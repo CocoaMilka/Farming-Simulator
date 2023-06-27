@@ -8,7 +8,7 @@ using UnityEngine;
 /// <remarks>
 /// Fruit(s) refer to any harvestable food (even though they may not be friuts), not the plant.
 /// </remarks>
-public interface IPlantable : MonoBehaviour
+public interface IPlantable
 {
 	/// <summary>
 	/// The amount the <c>IPlantable</c> object has grown.
