@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MouseOver : MonoBehaviour
 {
-    Color m_MouseOverColor = Color.red;
+    public ParticleSystem ps;
+
+    Color m_MouseOverColor = new Color(1, 1, 1, .5f);
     Color m_OriginalColor;
 
     public GameObject farmLand;
@@ -31,6 +33,7 @@ public class MouseOver : MonoBehaviour
             Quaternion rotation = gameObject.transform.rotation;
 
             Instantiate(farmLand, position, rotation, gameObject.transform.parent);
+            Instantiate(ps, position, rotation, gameObject.transform.parent);
             Destroy(gameObject);
         }
     }
