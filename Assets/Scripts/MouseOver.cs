@@ -8,7 +8,7 @@ public class MouseOver : MonoBehaviour
     public ParticleSystem ps;
     public Material particleMaterial;
 
-    Color m_MouseOverColor = new Color(1, 1, 1, .5f);
+    Color m_MouseOverColor = Color.blue;
     Color m_OriginalColor;
 
     public GameObject farmLand;
