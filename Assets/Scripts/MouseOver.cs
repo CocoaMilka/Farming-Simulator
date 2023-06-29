@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MouseOver : MonoBehaviour
 {
     public ParticleSystem ps;
+    public Material particleMaterial;
 
     Color m_MouseOverColor = new Color(1, 1, 1, .5f);
     Color m_OriginalColor;
@@ -33,7 +35,7 @@ public class MouseOver : MonoBehaviour
             Quaternion rotation = gameObject.transform.rotation;
 
             Instantiate(farmLand, position, rotation, gameObject.transform.parent);
-            Instantiate(ps, position, rotation, gameObject.transform.parent);
+            particlesEffects(position, rotation);
             Destroy(gameObject);
         }
     }
@@ -41,5 +43,13 @@ public class MouseOver : MonoBehaviour
     void OnMouseExit()
     {
         m_Renderer.material.color = m_OriginalColor;
+    }
+
+    void particlesEffects(Vector3 position, Quaternion rotation)
+    {
+        // Particles will have same texture as the block being destroyed/modified (like minecraft)
+        ps.GetComponent<ParticleSystemRenderer>().material = particleMaterial;
+
+        Instantiate(ps, position, rotation, gameObject.transform.parent);
     }
 }

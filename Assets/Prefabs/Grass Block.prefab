@@ -111,4 +111,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ps: {fileID: 1312197397093497070, guid: 0189043ca1914854bb80e19d01978aa4, type: 3}
+  particleMaterial: {fileID: 2100000, guid: a87d60e5d93169944aad295a61889960, type: 2}
   farmLand: {fileID: 3834881663048615401, guid: 4b741708d9ad74b4e912b69742b2b0b7, type: 3}
