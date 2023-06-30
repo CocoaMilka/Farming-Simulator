@@ -1,28 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class DropdownHandler : MonoBehaviour
+public class HarevstedDropdownHandler : MonoBehaviour
 {
-    public GameObject seedDropdown;
-    public GameObject toolDropdown;
-    public GameObject harvestedFoodDropdown;
 
-    // Called when a dropdown changed uwu like the game
+    // Called when the harvested dropdown changed :3 like the game
     public void dropdownChanged()
     {
-        Debug.Log("Changed");
+        int val = gameObject.GetComponentInParent<TMP_Dropdown>().value;
+        Debug.Log("Harevsted Changed to " + val);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
