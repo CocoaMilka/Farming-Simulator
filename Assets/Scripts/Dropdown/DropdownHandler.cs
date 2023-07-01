@@ -21,6 +21,7 @@ public class DropdownHandler : MonoBehaviour
         // gets the value that the dropdown changed to
         int val = dropdown.value;
 
+        // does stuff with the name and option
         Debug.Log(name + " changed to " + options[val].text);
     }
 
