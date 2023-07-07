@@ -6,17 +6,18 @@ using UnityEngine;
 // This is intended to set a game object's rotation to be the same as the camera's
 public class Billboard_Effect : MonoBehaviour
 {
-    public GameObject camera;
+    private Camera mainCamera;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        // Automatically sets main camera for every object containing this script :3
+        mainCamera = Camera.main;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<Transform>().rotation = camera.GetComponent<Transform>().rotation;
+        // Only rotate via the Y axis of the camera, may change later...
+        float yRotation = mainCamera.transform.eulerAngles.y;
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
     }
 }
