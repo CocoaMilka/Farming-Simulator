@@ -5,46 +5,40 @@ using UnityEngine;
 // Attach this script to Jamie nya :3 this will allow him to move around
 public class PlayerControls : MonoBehaviour
 {
-    
-    private Camera mainCamera;
-
-    private CharacterController controller;
-    private Vector3 playerVelocity;
-    private bool groundedPlayer;
-    private float playerSpeed = 2.0f;
-    private float jumpHeight = 1.0f;
-    private float gravityValue = -9.81f;
+    public Transform camera;
+    public CharacterController controller;
+    public float speed = 3f;
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
 
     void Start()
     {
-        mainCamera = Camera.main;
-        controller = gameObject.AddComponent<CharacterController>();
+        controller = GetComponent<CharacterController>();
+        camera = Camera.main.GetComponent<Transform>();
     }
 
     void Update()
     {
-        // Stolen from unity docs :3 need to update later for nicer movement
-        groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
+
+        if (direction.magnitude >= 0.1f)
         {
-            playerVelocity.y = 0f;
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + camera.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+
+            Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            controller.Move(moveDirection.normalized * speed * Time.deltaTime);
         }
+    }
 
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        controller.Move(move * Time.deltaTime * playerSpeed);
+    // For CPU time indepent physics calculations
+    void FixedUpdate()
+    {
 
-        if (move != Vector3.zero)
-        {
-            gameObject.transform.forward = move;
-        }
-
-        // Changes the height position of the player..
-        if (Input.GetButtonDown("Jump") && groundedPlayer)
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-        }
-
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
     }
 }
