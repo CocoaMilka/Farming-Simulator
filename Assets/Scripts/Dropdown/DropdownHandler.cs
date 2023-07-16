@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DropdownHandler : MonoBehaviour
 {
-    public DropdownManager manager;
+    public ListManager manager;
     public TMP_Dropdown dropdown;
     public string dropdownName;
     public List<string> options;
@@ -41,7 +41,7 @@ public class DropdownHandler : MonoBehaviour
         // clears the default options
         dropdown.ClearOptions();
 
-        manager = new DropdownManager(dropdownName, options, sprites);
+        manager = new ListManager(dropdownName, options, sprites);
 
         // adds the elements of options and sprites
         List<TMP_Dropdown.OptionData> optionData = new List<TMP_Dropdown.OptionData>();

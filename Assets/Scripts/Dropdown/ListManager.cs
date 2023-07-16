@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DropdownManager
+public class ListManager
 {
     public string name;
     public List<string> options;
     public List<Sprite> sprites;
     public int currentIndex;
 
-    public DropdownManager(string name, List<string> options, List<Sprite> sprites)
+    public ListManager(string name, List<string> options, List<Sprite> sprites)
     {
         this.name = name;
         this.options = options;
@@ -17,13 +17,11 @@ public class DropdownManager
         this.currentIndex = 0;
     }
 
-
     public void AddAtIndex(string name, Sprite sprite, int index)
     {
         // Checks if the index in in range
         if (index >= 0 && index <= options.Count)
         {
-            
             options.Insert(index, name);
             sprites.Insert(index, sprite);
 

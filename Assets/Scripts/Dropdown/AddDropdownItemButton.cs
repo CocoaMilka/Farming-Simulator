@@ -25,7 +25,6 @@ public class AddDropdownItemButton : MonoBehaviour
         // Create a new OptionData for the new item
         TMP_Dropdown.OptionData newOptionData = new TMP_Dropdown.OptionData(dropdownHandler.manager.options[itemIndex], dropdownHandler.manager.sprites[itemIndex]);
 
-
         // Add the new item to the dropdown UI
         dropdownHandler.dropdown.options.Insert(itemIndex, newOptionData);
 
