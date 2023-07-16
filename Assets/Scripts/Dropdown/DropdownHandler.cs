@@ -5,29 +5,41 @@ using UnityEngine;
 
 public class DropdownHandler : MonoBehaviour
 {
+    private DropdownManager manager;
+    private TMP_Dropdown dropdown;
+    public string dropdownName;
+    public List<string> options;
+    public List<Sprite> sprites;
+
 
     // Called when a dropdown changed owo like the game
     public void dropdownChanged()
     {
-        // parent of DropdownHandler is a TMP_Dropdown object
-        TMP_Dropdown dropdown = gameObject.GetComponentInParent<TMP_Dropdown>();
+        // Get the selected option's index from the dropdown
+        int selectedOptionIndex = dropdown.value;
 
-        // the parent of the TMP_Dropdown objct is a TMP_Text object. This get's the text
-        string name = dropdown.GetComponentInParent<TMP_Text>().text;
+        // Get the name of the selected option
+        string selectedOptionName = dropdown.options[selectedOptionIndex].text;
 
-        // gets the options in the dropdown into a list
-        List<TMP_Dropdown.OptionData> options = dropdown.options;
+        // Get the name of the dropdown
+        string name = manager.name;
 
-        // gets the value that the dropdown changed to
-        int val = dropdown.value;
+        // Set the current tool index in the DropdownManager
+        manager.currentIndex = selectedOptionIndex;
 
-        // does stuff with the name and option
-        Debug.Log(name + " changed to " + options[val].text);
+        // Perform any other actions or logic related to the dropdown change
+
+        Debug.Log(name + " option changed: " + selectedOptionName);
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        // parent of DropdownHandler is a TMP_Dropdown object
+        dropdown = gameObject.GetComponentInParent<TMP_Dropdown>();
+
+        manager = new DropdownManager(dropdownName,options, sprites);
+        dropdown.AddOptions(options);
 
     }
 

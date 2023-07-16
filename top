@@ -1,0 +1,28 @@
+* [33m6d6bbe5[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/feature/no-ref/add-player-controls[m[33m)[m fix: Update scene
+* [33mb1a95cd[m feat: Add player movement
+*   [33mf2c4152[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Merge branch 'feature/no-ref/add-farm-land'
+[32m|[m[33m\[m  
+[32m|[m * [33mab6c5d4[m[33m ([m[1;31morigin/feature/no-ref/add-farm-land[m[33m)[m refactor(billboard): Automatically get main camera ; Limit rotation to y-axis, may change later??
+[32m|[m * [33m2c5f944[m[33m ([m[1;32mfeature/no-ref/add-farm-land[m[33m)[m feat: Add billboard effect for Jamie ^-^
+[32m|[m * [33m406b59e[m fix: update scene
+[32m|[m * [33m94181cc[m feat: add a little scrunkly
+[32m|[m * [33m2e2e886[m fix: update material assets
+[32m|[m * [33mb7565be[m feat: add texture placeholders
+[32m|[m * [33m9b3eba0[m refactor(farmland): separate particle effects into own function
+[32m|[m * [33m88bb983[m feat: Silly mud particles on click owo
+[32m|[m * [33m7fce973[m feat: Add ability to convert grass blocks to farmland
+[32m|[m [33m|[m * [33mdd93f6b[m[33m ([m[1;31morigin/feature/no-ref/add-UI[m[33m, [m[1;32mfeature/no-ref/add-UI[m[33m)[m feat: Add tool sprites and puth them in Tools dropdown
+[32m|[m [33m|[m * [33maa4e81a[m feat: Make dropdown prefab better
+[32m|[m [33m|[m * [33m976722c[m feat: Make dropdown prefab
+[32m|[m [33m|[m * [33ma3cb62f[m feat: Add names for dropdowns and reduce redundant code for their messages
+[32m|[m [33m|[m * [33m27d0e03[m feat: Make the dropdowns' debug display the option they changed to
+[32m|[m [33m|[m * [33m210db21[m feat: Add unique debug messages to each drop down
+[32m|[m [33m|[m * [33ma489b4a[m feat: Add template UI with dropdown
+[32m|[m [33m|[m[32m/[m  
+[32m|[m[32m/[m[33m|[m   
+* [33m|[m [33m757f300[m[33m ([m[1;31morigin/feature/no-ref/add-code-for-plant-interface[m[33m)[m fix: Remove typo in IPlantable.cs
+* [33m|[m [33mc841295[m fix: Resolve compilation error in IPlantable.cs
+* [33m|[m [33m00468e1[m feat: Add IPlantable interface
+[33m|[m[33m/[m  
+* [33m4b347e2[m chore: initial repo and project setup
+* [33m75ff898[m Initial commit
