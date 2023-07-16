@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class DropdownHandler : MonoBehaviour
 {
-    private DropdownManager manager;
-    private TMP_Dropdown dropdown;
+    public DropdownManager manager;
+    public TMP_Dropdown dropdown;
     public string dropdownName;
     public List<string> options;
     public List<Sprite> sprites;
@@ -15,17 +15,17 @@ public class DropdownHandler : MonoBehaviour
     // Called when a dropdown changed owo like the game
     public void dropdownChanged()
     {
+        // Set the current tool index in the DropdownManager
+        manager.currentIndex = dropdown.value;
+
         // Get the selected option's index from the dropdown
-        int selectedOptionIndex = dropdown.value;
+        int selectedOptionIndex = manager.currentIndex;
 
         // Get the name of the selected option
-        string selectedOptionName = dropdown.options[selectedOptionIndex].text;
+        string selectedOptionName = manager.options[selectedOptionIndex];
 
         // Get the name of the dropdown
         string name = manager.name;
-
-        // Set the current tool index in the DropdownManager
-        manager.currentIndex = selectedOptionIndex;
 
         // Perform any other actions or logic related to the dropdown change
 
@@ -38,14 +38,17 @@ public class DropdownHandler : MonoBehaviour
         // parent of DropdownHandler is a TMP_Dropdown object
         dropdown = gameObject.GetComponentInParent<TMP_Dropdown>();
 
-        manager = new DropdownManager(dropdownName,options, sprites);
-        dropdown.AddOptions(options);
+        // clears the default options
+        dropdown.ClearOptions();
 
-    }
+        manager = new DropdownManager(dropdownName, options, sprites);
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        // adds the elements of options and sprites
+        List<TMP_Dropdown.OptionData> optionData = new List<TMP_Dropdown.OptionData>();
+        for (int i = 0; i < options.Count; i++)
+        {
+            optionData.Add(new TMP_Dropdown.OptionData(options[i], sprites[i]));
+        }
+        dropdown.AddOptions(optionData);
     }
 }
