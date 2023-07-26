@@ -1262,7 +1262,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 239.04688, y: -250.27893}
+  m_AnchoredPosition: {x: 239.04688, y: -10}
   m_SizeDelta: {x: 320, y: 20.5579}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &164348046
@@ -5329,7 +5329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &617263646
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7219,7 +7219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7094784594900553597, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 7094784594900553597, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7232,6 +7232,22 @@ PrefabInstance:
     - target: {fileID: 7094784594900553597, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: options.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: sprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: options.Array.data[0]
+      value: Placeholder
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: options.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
@@ -8048,7 +8064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7094784594900553597, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 7094784594900553597, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8062,6 +8078,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: options.Array.data[0]
+      value: Hoe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: options.Array.data[1]
+      value: Shovel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: options.Array.data[2]
+      value: Watering Can
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: bbb5c55d02131b748ab1f3d7a3895485, type: 3}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9ab450c7c33d22a4cbfaf5f57b165136, type: 3}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 72671a7e0d94e8c479d0906d418936d2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
 --- !u!1001 &969117735
@@ -9403,7 +9443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1181068897
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9442,7 +9482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1181615534
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12902,7 +12942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1522740308
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17854,7 +17894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7094784594900553597, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 7094784594900553597, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -17868,5 +17908,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: options.Array.data[0]
+      value: Sample Seeds
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: options.Array.data[1]
+      value: More Seeds
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: options.Array.data[2]
+      value: Even more seeds
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d1c3cc4aa310de49a0b3c756de7f984, type: 3}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d1c3cc4aa310de49a0b3c756de7f984, type: 3}
+    - target: {fileID: 7094784595465492334, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d1c3cc4aa310de49a0b3c756de7f984, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 133f4240d5eb2c149b6680e1b56402cb, type: 3}
